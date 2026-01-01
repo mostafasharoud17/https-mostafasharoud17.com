@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Shroud | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <
+</head>
+<body>
+
+    <nav>
+        <div class="logo">M.SHROUD</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="https://www.facebook.com/share/1RTxByAj9S/">Contact</a></li>
+            <li><a href="https://www.youtube.com/@MostafaSharoud-j5k">my page youtube</a>
+        </ul>
+        <div class="burger" onclick="toggleNav()">
+            <div></div><div></div><div></div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Hi, I'm <span>Mostafa Shroud</span></h1>
+        <p>A Passionate Software Developer building digital experiences.</p>
+        <a href="https://www.facebook.com/share/1RTxByAj9S/" class="btn">contact Me</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">My Technical Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fab fa-html5"></i>
+                <h3>Frontend</h3>
+                <p>HTML5, CSS3, JavaScript, React.js</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Backend</h3>
+                <p>Node.js, Python, Databases</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>UI/UX</h3>
+                <p>Responsive Design & User Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: var(--text-dim);">
+        <p>&copy; 2026 Mostafa Shroud. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('.nav-links');
+            const burger = document.querySelector('.burger');
+            nav.classList.toggle('nav-active');
+            
+            // Burger Animation
+            burger.classList.toggle('toggle');
+        }
+        
+
+        // Smooth Scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        import { SpeedInsights } from "@vercel/speed-insights/next"
+    </script>
+</body>
+</html>
